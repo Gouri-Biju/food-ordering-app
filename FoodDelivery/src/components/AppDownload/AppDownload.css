@@ -1,0 +1,78 @@
+/* Styling for the app download container */
+.app-download {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 50px; /* Space before the download section */
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Text for the app download section */
+  .app-download p {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.4;
+  }
+  
+  /* Styling for the platforms container (Google Play and Apple App Store images) */
+  .app-download-platforms {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  /* Individual app store icons styling */
+  .app-download-platforms img {
+    width: 150px; /* Adjust the icon size */
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Hover effect for the images */
+  .app-download-platforms img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+  }
+  
+  /* Responsive design for smaller screens */
+  
+  /* For tablets (max-width 1024px) */
+  @media (max-width: 1024px) {
+    .app-download {
+      padding: 30px 20px;
+    }
+  
+    .app-download p {
+      font-size: 1.4rem;
+    }
+  
+    .app-download-platforms {
+      gap: 15px;
+    }
+  
+    .app-download-platforms img {
+      width: 130px; /* Slightly smaller icons on tablets */
+    }
+  }
+  
+  /* For mobile screens (max-width 768px) */
+  @media (max-width: 768px) {
+    .app-download {
+      padding: 20px;
+    }
+  
+    .app-download p {
+      font-size: 1.2rem; /* Slightly smaller text */
+    }
+  
+    .app-download-platforms {
+      flex-direction: column; /* Stack icons vertically */
+      gap: 15px;
+    }
+  
+    .app-download-platforms img {
+      width: 120px; /* Smaller icons for mobile */
+    }
+  }
+  

@@ -1,0 +1,116 @@
+/* PlaceOrder.css */
+
+/* Container for the entire order form */
+.place-order {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 30px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+  }
+  
+  /* Styling for the left part (delivery information) */
+  .place-order-left {
+    width: 60%;
+  }
+  
+  .place-order-left p.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .place-order-left .multi-fields {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .place-order-left input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .place-order-left input[type="text"],
+  .place-order-left input[type="email"] {
+    background-color: white;
+  }
+  
+  /* Styling for the right part (cart totals) */
+  .place-order-right {
+    width: 35%;
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cart-total h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .cart-total-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .cart-total-details p {
+    color: #555;
+  }
+  
+  .cart-total-details b {
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .cart-total-details p:last-child {
+    color: tomato;
+  }
+  
+  /* Button Styling for "Proceed to Payment" */
+  .place-order-right button {
+    width: 100%;
+    padding: 15px;
+    background-color: tomato;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .place-order-right button:hover {
+    background-color: #d87a5a;
+  }
+  
+  /* Responsive Design for smaller screens */
+  @media (max-width: 768px) {
+    .place-order {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .place-order-left {
+      width: 100%;
+    }
+  
+    .place-order-right {
+      width: 100%;
+    }
+  }
+  
+  

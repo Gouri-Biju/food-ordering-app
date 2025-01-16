@@ -1,0 +1,157 @@
+/* General styling for the Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: transparent; /* Default background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%; /* Full width */
+    border-bottom: 2px solid transparent; /* Default border */
+    transition: all 0.3s ease; /* Smooth animation for size and background */
+  }
+  
+  /* Change styles when scrolled */
+  .navbar.scrolled {
+    background: rgba(255, 255, 255, 0.95); /* Light shade background */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Slightly darker shadow */
+    padding: 10px 30px; /* Reduced padding for smaller size */
+    border-bottom: 2px solid #ccc; /* Border only at the bottom */
+  }
+  
+  /* Logo styling */
+  .logo {
+    height: 50px;
+    transition: height 0.3s ease; /* Smooth animation for logo resizing */
+  }
+  
+  .navbar.scrolled .logo {
+    height: 40px; /* Smaller logo when scrolled */
+  }
+  
+  /* Navbar menu styling */
+  .navbar-menu {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+  }
+  
+  .navbar-menu a,
+  .navbar-menu .active {
+    text-decoration: none;
+    color: #333; /* Neutral color for text */
+    font-weight: 500;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    position: relative;
+  }
+  
+  .navbar-menu a:hover,
+  .navbar-menu .active {
+    color: #000;
+  }
+  
+  .navbar-menu a:hover::after,
+  .navbar-menu .active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    background: #000;
+    border-radius: 2px;
+    animation: slide-in 0.3s ease forwards;
+  }
+  
+  @keyframes slide-in {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  /* Right section styling */
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  /* Search icon styling */
+  .navbar-right img {
+    height: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .navbar-right img:hover {
+    transform: rotate(15deg);
+  }
+  
+  /* Cart icon and notification dot */
+  .navbar-search-icon {
+    position: relative;
+  }
+  
+  .navbar-search-icon img {
+    height: 30px;
+  }
+  
+  .dot {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 12px;
+    height: 12px;
+    background: #ff0000;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite ease-in-out;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.3);
+      opacity: 0.6;
+    }
+  }
+  
+  /* Sign-in button */
+  button {
+    padding: 8px 15px;
+    background: transparent;
+    color: #333;
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  button:hover {
+    background: #333;
+    color: #fff;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .navbar-menu {
+      display: none;
+    }
+  
+    .navbar-right {
+      gap: 10px;
+    }
+  }
+  

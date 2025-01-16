@@ -1,0 +1,229 @@
+.cart{
+    margin-top: 100px;
+}
+.cart .cart-items-title{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 0.5fr;
+    align-items: center;
+    color: grey;
+}
+.cart-items-item{
+    margin: 10px 0px;
+    color: black;
+}
+.cart-items-item img{
+    width: 50px;
+}
+.cart hr{
+    height: 1px;
+    background-color: #e2e2e2;
+    border: none;
+}
+.cart-bottom{
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    gap: max(12vw,20px);
+}
+.cart-total{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.cart-total-details{
+    display: flex;
+    justify-content: space-between;
+    color: #555;
+}
+.cart-total hr{
+    margin: 10px 0px;
+    color: white;
+    background-color: tomato;
+    width: max(15vw,400px);
+    padding: 12px, 0px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.cart-promocode{
+    flex: 1;
+}
+.cart-promocode p{
+    color: #555;
+}
+.cart-promocode-input{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eaeaea;
+    border-radius: 4px;
+}
+.cart-promocode-input input{
+    background: transparent;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+}
+.cart-promocode-input button{
+    width: max(10vw,150px);
+    padding: 12px 5px;
+    background-color: black;
+    border: none;
+    color: white;
+    border-radius: 4px;
+}
+@media (max-width:750px){
+    .cart-bottom{
+        flex-direction: column-reverse;
+    }
+    .cart-promocode{
+        justify-content: start;
+    }
+}
+/* Proceed to Checkout Button Animation */
+.proceed-button {
+    background-color: #d6453d; /* Darker red base color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .proceed-button:hover {
+    background-color: #b93933; /* Even darker shade on hover */
+    transform: scale(1.05); /* Slightly increase the size */
+  }
+  
+  .proceed-button:active {
+    transform: scale(0.95); /* Slightly shrink on click */
+  }
+  
+  .proceed-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transform: skewX(-25deg);
+    transition: left 0.5s ease-in-out;
+  }
+  
+  .proceed-button:hover::after {
+    left: 100%;
+  }
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 10px rgba(214, 69, 61, 0.5);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(214, 69, 61, 0.7);
+    }
+    100% {
+      box-shadow: 0 0 10px rgba(214, 69, 61, 0.5);
+    }
+  }
+  
+  .proceed-button:hover {
+    animation: pulse 1.5s infinite; /* Adds a glowing pulse effect */
+  }
+  /* Promocode Container */
+.cart-promocode {
+  background-color: #f9f9f9; /* Light background for the promo section */
+  border: 2px dashed #ccc; /* Dashed border to highlight the promo section */
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.cart-promocode:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+/* Promocode Input Field */
+.cart-promocode-input input {
+  width: 60%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-right: 10px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cart-promocode-input input:focus {
+  border-color: #4caf50; /* Green border on focus */
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Soft green glow */
+}
+
+/* Promocode Submit Button */
+.cart-promocode-input button {
+  background-color: #0078d4; /* Blue background */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cart-promocode-input button:hover {
+  background-color: #0056a3; /* Darker blue on hover */
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.cart-promocode-input button:active {
+  transform: scale(0.95); /* Shrink on click */
+  background-color: #003f78; /* Even darker blue */
+}
+
+/* Promocode Text */
+.cart-promocode p {
+  font-size: 14px;
+  font-style: italic;
+  color: #666;
+  margin-bottom: 10px;
+}
+.cross {
+  background: #ffebeb; /* Light red background for a subtle appearance */
+  color: #d11a2a; /* Bold red for the text/icon */
+  border: 1px solid #d11a2a; /* Border matches the text color */
+  border-radius: 50%; /* Makes the button circular */
+  font-size: 16px; /* Comfortable size for readability */
+  font-weight: bold; /* Bold text for emphasis */
+  width: 30px; /* Circular shape width */
+  height: 30px; /* Circular shape height */
+  display: flex; /* Flexbox for centering the content */
+  align-items: center; /* Vertical centering */
+  justify-content: center; /* Horizontal centering */
+  cursor: pointer; /* Pointer cursor to indicate interactivity */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.cross:hover {
+  background: #d11a2a; /* Darker red background on hover */
+  color: #ffffff; /* White text/icon on hover */
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+.cross:focus {
+  outline: 2px solid #d11a2a; /* Focus outline for accessibility */
+  outline-offset: 2px; /* Space between button and outline */
+}
