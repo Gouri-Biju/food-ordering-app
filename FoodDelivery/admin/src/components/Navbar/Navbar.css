@@ -1,0 +1,25 @@
+/* Navbar.css */
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space between logo and profile image */
+    align-items: center; /* Vertically center items */
+    padding: 10px 20px; /* Add padding for spacing */
+    background-color: #f8f9fa; /* Light background color */
+    border-bottom: 2px solid #eaeaea; /* Optional: Adds a bottom border */
+  }
+  
+  .logo {
+    height: 50px; /* Set a fixed height for the logo */
+    width: auto; /* Maintain aspect ratio */
+    cursor: pointer; /* Add a pointer cursor on hover */
+  }
+  
+  .profile {
+    height: 40px; /* Set a smaller height for the profile image */
+    width: 40px; /* Set a fixed width to make it circular */
+    border-radius: 50%; /* Makes the profile image circular */
+    cursor: pointer; /* Add a pointer cursor on hover */
+    object-fit: cover; /* Ensure the image fits well in the circle */
+  }
+  

@@ -1,0 +1,49 @@
+/* Sidebar.css */
+
+.sidebar {
+  background-color: #f4f4f4; 
+  padding: 20px; /* Inner spacing for content */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for a 3D effect */
+  }
+  
+  .sidebar-options {
+    display: flex;
+    flex-direction: row; /* Stack items vertically */
+    gap: 20px; /* Space between options */
+  }
+  
+  .sidebar-option {
+    display: flex;
+    align-items: center; /* Vertically align icon and text */
+    gap: 10px; /* Space between icon and text */
+    padding: 10px; /* Inner spacing for option */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .sidebar-option:hover {
+    background-color: #e0e0e0; /* Highlighted background on hover */
+  }
+  
+  .sidebar-option img {
+    width: 30px; /* Fixed size for icons */
+    height: 30px; /* Fixed size for icons */
+    object-fit: contain; /* Prevent distortion */
+  }
+  
+  .sidebar-option p {
+    margin: 0; /* Remove default margin */
+    font-size: 16px; /* Text size */
+    font-weight: 500; /* Slightly bold text */
+    color: #333; /* Dark text color */
+  }
+  .sidebar-option.active{
+    background-color: #fff0ed;
+    border-color: tomato;
+  }
+  @media (max-width:900px){
+    .sidebar-option p{
+        display: none;
+    }
+  }

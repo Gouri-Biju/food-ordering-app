@@ -1,0 +1,93 @@
+/* Add.css */
+
+.add {
+    display: flex;
+    justify-content: center; /* Center the form horizontally */
+    align-items: center; /* Center the form vertically */
+    padding: 20px;
+    background-color: #f8f9fa; /* Light background color */
+    min-height: 100vh; /* Full viewport height */
+  }
+  
+  form {
+    background: #ffffff; /* White background for the form */
+    padding: 30px;
+    border-radius: 10px; /* Rounded corners for the form */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 400px; /* Fixed width for the form */
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+    gap: 20px; /* Space between elements */
+  }
+  
+  .flex-col {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 10px; /* Space between items */
+  }
+  
+  .add-img-upload {
+    align-items: center; /* Center content horizontally */
+  }
+  
+  .add-img-upload img {
+    width: 150px; /* Set a fixed width for the upload area image */
+    height: 150px;
+    object-fit: cover; /* Prevent image distortion */
+    border: 2px dashed #ccc; /* Dashed border for the upload area */
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer; /* Indicate clickability */
+    transition: border-color 0.3s ease;
+  }
+  
+  .add-img-upload img:hover {
+    border-color: #007bff; /* Change border color on hover */
+  }
+  
+  .add-product-name input,
+  .add-product-description textarea,
+  .add-category-price select,
+  .add-price input {
+    padding: 10px;
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 14px; /* Standard font size */
+    width: 100%; /* Full width of container */
+    box-sizing: border-box; /* Include padding in width calculation */
+  }
+  
+  textarea {
+    resize: none; /* Prevent resizing of the textarea */
+  }
+  
+  .add-category-price {
+    display: flex;
+    justify-content: space-between; /* Space out category and price inputs */
+    gap: 20px; /* Add space between the two sections */
+  }
+  
+  .add-category,
+  .add-price {
+    flex: 1; /* Ensure equal width for both sections */
+  }
+  
+  .add-btn {
+    padding: 10px 15px;
+    background-color: #007bff; /* Blue background */
+    color: #ffffff; /* White text */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Slightly larger font */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+  }
+  
+  .add-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  .add-btn:active {
+    background-color: #003d82; /* Even darker blue on click */
+  }
+  
